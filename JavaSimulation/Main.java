@@ -278,6 +278,7 @@ public class Main {
             result += s;
         }
         UI.println(result);
+        //Lol
         return result;
     }
 
