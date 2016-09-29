@@ -7,6 +7,8 @@
 
 //import ToWebSite.PointXY;
 import ecs100.UI;
+import ecs100.UIFileChooser;
+
 import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -16,6 +18,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Drawing {
     private ArrayList<PointXY> path = new ArrayList();
@@ -41,6 +44,8 @@ public class Drawing {
 
         UI.printf("*************************\n");
     }
+
+
 
     public void draw() {
         for(int i = 1; i < this.path.size(); ++i) {
