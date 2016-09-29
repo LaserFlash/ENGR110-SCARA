@@ -233,7 +233,7 @@ public class Main {
                 out.print(" ");
                 out.print(addSpaces(sc_for_spaces.next()));
             }
-
+            
             Scanner sc = new Scanner(new File(fileName + "2.txt"));
             while(sc.hasNext()) {
                 String string = sc.next();
@@ -271,14 +271,12 @@ public class Main {
             if (character == " "){
                 character = " ";
             }
-
             temp.add(character);
         }
         for (String s: temp){
             result += s;
         }
         UI.println(result);
-        //Lol lol
         return result;
     }
 
