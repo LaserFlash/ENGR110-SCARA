@@ -264,12 +264,12 @@ public class Arm
     // for motor to be in position(angle) theta1
     // linear interpolation
     public int get_pwm1(){
-        int pwm = (int)((theta1 - 5.1686)/-0.0943);
+        int pwm = (int)((theta1 - 13.82)/-0.0987);
         return pwm;
     }
     // ditto for motor 2
     public int get_pwm2(){
-        int pwm = (int) ((theta2 - 93.925)/-0.1041);
+        int pwm = (int) ((theta2 - -14.49)/-0.1035);
 
         //pwm = (int)(pwm2_90 + (theta2 - 90)*pwm2_slope);
         return pwm;
