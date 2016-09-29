@@ -55,17 +55,16 @@ public class Main {
         this.arm.draw();
     }
 
-    public void loadSVG(){
-        drawing.loadPathFromSvg(UIFileChooser.open());
-        drawing.draw();
-    }
-
     public void checkDirect(){
         state = 4;
     }
 
     public void savePulse(){
-        this.tool_path.save_pwm_file(drawing, arm);
+        String fname = "pwm.txt";
+        tool_path = new ToolPath();
+        tool_path.convert_drawing_to_angles(drawing,arm);
+        tool_path.convert_angles_to_pwm(arm);
+        this.tool_path.save_pwm_file(fname);
     }
 
     public void sendPulse(){
@@ -159,7 +158,9 @@ public class Main {
 
     public void save_ang() {
         String fname = UIFileChooser.save();
-        this.tool_path.convert_drawing_to_angles(this.drawing, this.arm, fname);
+        tool_path = new ToolPath();
+        this.tool_path.convert_drawing_to_angles(this.drawing, this.arm);
+        tool_path.save_angles(fname);
     }
 
     public void load_ang() {

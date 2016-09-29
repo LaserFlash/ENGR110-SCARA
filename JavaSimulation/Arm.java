@@ -29,16 +29,16 @@ public class Arm
     private int pwm1_val_1;
     private double theta1_val_1;
     // motor 1, point 2
-    private double pwm1_val_2; 
+    private double pwm1_val_2;
     private double theta1_val_2;
-    
+
     // motor 2, point 1
     private int pwm2_val_1;
     private double theta2_val_1;
     // motor 2, point 2
-    private double pwm2_val_2; 
+    private double pwm2_val_2;
     private double theta2_val_2;
-    
+
     
     // current state of the arm
     private double theta1; // angle of the upper arm
@@ -230,7 +230,7 @@ public class Arm
             return;
         }
 
-        if(d1+d2 <= 2*r){
+        if(yTool > 250){
             valid_state = false;
             UI.println("Singularity");
             return;
