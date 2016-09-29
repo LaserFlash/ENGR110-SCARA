@@ -1,12 +1,4 @@
-//package ToWebSite;
 
-
-/**
- * Class represents SCARA robotic arm.
- * 
- * @Arthur Roberts
- * @0.0
- */
 
 import ecs100.UI;
 import java.awt.Color;

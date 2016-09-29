@@ -7,13 +7,6 @@
 
 //import ToWebSite.PointXY;
 import ecs100.UI;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -126,8 +119,6 @@ public class Drawing {
 
     }
 
-    public void loadPathFromSvg(String fName) {
-    }
 
     public int get_drawing_size() {
         return this.path.size();

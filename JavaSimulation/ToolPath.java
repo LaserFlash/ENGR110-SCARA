@@ -1,6 +1,3 @@
-//package ToWebSite;
-
-
 /**
  * ToolPath stores motor contol signals (pwm)
  * and motor angles

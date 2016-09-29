@@ -1,14 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
-//package ToWebSite;
-
-//import ToWebSite.Arm;
-//import ToWebSite.Drawing;
-//import ToWebSite.PointXY;
-//import ToWebSite.ToolPath;
 import ecs100.*;
 import ecs100.UIButtonListener;
 import ecs100.UIFileChooser;
@@ -248,7 +237,7 @@ public class Main {
                 //System.out.println("here");
                 double x = 250;
                 double y = 150;
-                double scalar = 0.6;
+                double scalar = 2;
                 if (string.equals("L")) {
                     x += scalar * sc.nextDouble();
                     y += scalar * sc.nextDouble();
