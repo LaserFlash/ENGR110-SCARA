@@ -278,7 +278,7 @@ public class Main {
             result += s;
         }
         UI.println(result);
-        //Lol
+        //Lol lol
         return result;
     }
 
