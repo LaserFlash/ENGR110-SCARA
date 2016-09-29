@@ -149,8 +149,10 @@ public class Arm
            double h = Math.sqrt(Math.pow(r,2) - Math.pow(d/2,2));
            double alpha = Math.atan((yJoint1 - yJoint2) / (xJoint2 - xJoint1));
            // tool position
-           double xt2 = xa - h * Math.cos(Math.PI / 2 - alpha);
-           double yt2 = ya - h * Math.sin(Math.PI / 2 - alpha);
+           double xt2 = xa - h * Math.cos((Math.PI / 2) - alpha);
+           double yt2 = ya - h * Math.sin((Math.PI / 2) - alpha);
+           UI.println("xt is " + xTool + "yt is " + yTool);
+           UI.println("xt should " + xt2 + "yt should " + yt2);
            this.xTool = xt2;
            this.yTool = yt2;
            return;
@@ -241,8 +243,8 @@ public class Arm
         this.theta1 = theta1;
         this.theta2 = theta2;
         
-        UI.printf("xTool:%3.1f, yTool:%3.1f\n",xTool,yTool);
-        UI.printf("theta1:%3.1f, theta2:%3.1f\n",theta1*180/Math.PI,theta2*180/Math.PI);
+        //UI.printf("xTool:%3.1f, yTool:%3.1f\n",xTool,yTool);
+        //UI.printf("theta1:%3.1f, theta2:%3.1f\n",theta1*180/Math.PI,theta2*180/Math.PI);
     }
 
     
@@ -270,8 +272,6 @@ public class Arm
     // ditto for motor 2
     public int get_pwm2(){
         int pwm = (int) ((theta2 - -14.49)/-0.1035);
-
-        //pwm = (int)(pwm2_90 + (theta2 - 90)*pwm2_slope);
         return pwm;
     }
 
