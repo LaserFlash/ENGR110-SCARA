@@ -64,12 +64,11 @@ public class Main {
     }
 
     public void sendPulse(){
-        String remoteDirectory = "user@adress:directory";
-        String file = UI.askString("File name: ");
-        String[] args = new String[] {"/bin/bash", "-c", "scp", file , remoteDirectory};
         try {
-            Process p = new ProcessBuilder(args).start();
-        }catch (IOException e){ UI.println(e);}
+            Runtime.getRuntime().exec("expect scp.exp");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void doKeys(String action) {
